@@ -1,19 +1,15 @@
+// big chainring, little cog: pedals once,
+// wheels many times 
 
-let chainring = 52 // number of teeth
+class Gear {
+    constructor(chainring, cog) {
+        this.chainring = chainring;
+        this.cog = cog;
+    }
 
-let cog = 11
+    ratio() {
+        return this.chainring / this.cog
+    }
+}
 
-let ratio = chainring / cog 
-console.log(ratio) 
-// 4.72727272...
-// each rotation of pedals causes wheels to travel
-// around almost five times
-
-let chainring = 30
-
-let cog = 27
-
-let ratio = chainring / cog 
-console.log(ratio) // 1.1111111111
-// easier gear, one rotation pedals moves wheels
-// a bit more than once
+console.log(new Gear(30, 27).ratio());
