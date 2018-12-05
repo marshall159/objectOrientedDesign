@@ -1,20 +1,15 @@
-# To compare different gears, bicyclists use the ratio of the numbers of their teeth
+class Gear
+    attr_reader :chainring, :cog 
 
-chainring = 52  # number of teeth
+    def initialize(chainring, cog)
+        @chainring = chainring
+        @cog = cog
+    end 
 
-cog = 11
+    def ratio
+        chainring / cog.to_f
+    end
 
-ratio = chainring / cog.to_f
+end
 
-puts ratio # 4.7272727272727275
-
-# Each time your feet push the pedals around one time, your wheels will travel around almost five times
-
-
-chainring = 30 
-
-cog = 27
-
-ratio = chainring / cog.to_f
-
-puts ratio # 1.1111111111111112
+puts Gear.new(52, 11).ratio 
