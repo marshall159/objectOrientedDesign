@@ -13,3 +13,4 @@ class Gear {
 }
 
 console.log(new Gear(30, 27).ratio());
+
